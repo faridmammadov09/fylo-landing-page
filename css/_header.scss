@@ -1,13 +1,14 @@
 header {
   display: grid;
   grid-template-columns: minmax(73px, 1fr) repeat(3, auto);
-  column-gap: 56px;
+  column-gap: 22px;
   background-color: $introBg;
   padding: 22px 20px 50px 20px;
   align-items: center;
 
   @include breakpoint(large) {
     padding: 73px 80px;
+    column-gap: 56px;
   }
 
   .logo {

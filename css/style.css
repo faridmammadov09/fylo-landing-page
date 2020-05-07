@@ -34,8 +34,8 @@ header {
   display: grid;
   -ms-grid-columns: minmax(73px, 1fr) (auto)[3];
       grid-template-columns: minmax(73px, 1fr) repeat(3, auto);
-  -webkit-column-gap: 56px;
-          column-gap: 56px;
+  -webkit-column-gap: 22px;
+          column-gap: 22px;
   background-color: #1c2431;
   padding: 22px 20px 50px 20px;
   -webkit-box-align: center;
@@ -46,6 +46,8 @@ header {
 @media screen and (min-width: 992px) {
   header {
     padding: 73px 80px;
+    -webkit-column-gap: 56px;
+            column-gap: 56px;
   }
 }
 
