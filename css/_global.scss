@@ -19,6 +19,10 @@ h3 {
   font-family: $font-title;
 }
 
+p {
+  margin-top: 0;
+}
+
 body {
   font-family: $font-body;
   font-size: calc(16px + 0.3vw);
@@ -26,4 +30,21 @@ body {
   margin: 0;
   padding: 0;
   color: #ffffff;
+}
+
+section {
+  padding: 0 27px 160px;
+}
+
+.btn-cta {
+  padding: 20px 40px;
+  background: linear-gradient(to right, $ctaCyan, $ctaBlue);
+  font-size: 0.9em;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 32px;
+
+  &:hover {
+    background: linear-gradient(to right, $ctaBlue, $ctaBlue);
+  }
 }
