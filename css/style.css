@@ -111,6 +111,31 @@ header .link:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 40vw;
+  width: 100%;
+  background-image: url("../images/bg-curvy-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .hero::after {
+    height: 33vw;
+    background-image: url("../images/bg-curvy-desktop.svg");
+  }
+}
+
+.hero > * {
+  z-index: 1;
 }
 
 .hero .illustration {
@@ -144,5 +169,63 @@ header .link:hover {
     font-size: 1em;
     max-width: 581px;
   }
+}
+
+.features {
+  background-color: #181f2a;
+}
+
+.features .feature-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  max-width: 880px;
+  margin: 0 auto;
+  -webkit-column-gap: 150px;
+          column-gap: 150px;
+  row-gap: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .features .feature-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    row-gap: 95px;
+  }
+}
+
+.features .feature {
+  min-height: 150px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features .feature-image {
+  margin-bottom: 34px;
+}
+
+.features .feature-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.features .feature-description {
+  font-size: 0.8em;
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
