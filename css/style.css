@@ -182,16 +182,14 @@ header .link:hover {
       grid-template-columns: 1fr;
   max-width: 880px;
   margin: 0 auto;
-  -webkit-column-gap: 150px;
-          column-gap: 150px;
-  row-gap: 80px;
+  gap: 80px 150px;
 }
 
 @media screen and (min-width: 768px) {
   .features .feature-grid {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    row-gap: 95px;
+    gap: 95px 150px;
   }
 }
 
