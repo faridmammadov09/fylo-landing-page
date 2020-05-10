@@ -8,6 +8,17 @@ html {
   box-sizing: border-box;
 }
 
+a,
+p {
+  // font-size: 0.8em;
+
+  font-size: 0.875rem;
+
+  @include breakpoint(large) {
+    font-size: 1rem;
+  }
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -33,6 +44,7 @@ body {
 }
 
 section {
+  background-color: $mainBg;
   padding: 0 27px 160px;
 }
 

@@ -9,6 +9,18 @@ html {
           box-sizing: border-box;
 }
 
+a,
+p {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 992px) {
+  a,
+  p {
+    font-size: 1rem;
+  }
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -34,6 +46,7 @@ body {
 }
 
 section {
+  background-color: #181f2a;
   padding: 0 27px 160px;
 }
 
@@ -159,7 +172,6 @@ header .link:hover {
 
 .hero p {
   max-width: 100%;
-  font-size: 0.8em;
   line-height: 1.6;
   margin-bottom: 1.8em;
 }
@@ -169,10 +181,6 @@ header .link:hover {
     font-size: 1em;
     max-width: 581px;
   }
-}
-
-.features {
-  background-color: #181f2a;
 }
 
 .features .feature-grid {
@@ -223,7 +231,70 @@ header .link:hover {
 }
 
 .features .feature-description {
-  font-size: 0.8em;
   margin-bottom: 0;
+}
+
+.productive-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
+  row-gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .productive-grid {
+    max-width: 1220px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.productive-image {
+  text-align: center;
+}
+
+.productive-image img {
+  max-width: 615px;
+  width: 100%;
+}
+
+.productive-text h2 {
+  font-size: 1.125em;
+}
+
+@media screen and (min-width: 992px) {
+  .productive-text h2 {
+    font-size: 1.5em;
+    max-width: 334px;
+  }
+}
+
+.productive-text p {
+  max-width: 547px;
+}
+
+.productive-text a {
+  background-image: url("../images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 25px;
+  color: #65e2d9;
+  border-bottom: 1px solid #65e2d9;
+  padding-bottom: 5px;
+  -webkit-transition: border 200ms ease, color 200ms ease;
+  transition: border 200ms ease, color 200ms ease;
+}
+
+.productive-text a:hover {
+  color: #ffffff;
+  border-bottom-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
