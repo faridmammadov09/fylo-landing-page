@@ -322,4 +322,106 @@ header .link:hover {
   color: #ffffff;
   border-bottom-color: #fff;
 }
+
+.quotes-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 25px;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .quotes-grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    max-width: 1320px;
+  }
+}
+
+.quotes .quote {
+  padding: 30px 30px 25px 25px;
+  background-color: #202a3c;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media screen and (min-width: 992px) {
+  .quotes .quote {
+    padding: 44px 30px 25px 25px;
+    max-width: 360px;
+  }
+}
+
+.quotes .quote:first-child {
+  position: relative;
+}
+
+.quotes .quote:first-child:before {
+  content: "";
+  background-image: url("/images/bg-quotes.png");
+  background-size: cover;
+  height: 46px;
+  width: 53px;
+  position: absolute;
+  top: -30px;
+  left: -5px;
+  z-index: -1;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+@media screen and (min-width: 992px) {
+  .quotes .quote:first-child:before {
+    top: -30px;
+    left: -10px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.quotes .quote__text {
+  font-size: 0.8em;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.quotes .quote__author {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr;
+      grid-template-columns: 40px 1fr;
+  -webkit-column-gap: 14px;
+          column-gap: 14px;
+}
+
+.quotes .quote__author-image {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+.quotes .quote__author-image img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.quotes .quote__author-name {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.quotes .quote__author-title {
+  font-size: 0.7em;
+}
 /*# sourceMappingURL=style.css.map */

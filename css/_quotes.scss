@@ -1,0 +1,83 @@
+.quotes {
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    column-gap: 40px;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1320px;
+    }
+  }
+
+  .quote {
+    // max-height: 200px;
+    padding: 30px 30px 25px 25px;
+    background-color: $testimonialsBg;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    @include breakpoint(large) {
+      padding: 44px 30px 25px 25px;
+      max-width: 360px;
+    }
+
+    &:first-child {
+      position: relative;
+    }
+
+    &:first-child:before {
+      content: "";
+      background-image: url("/images/bg-quotes.png");
+      background-size: cover;
+      height: 46px;
+      width: 53px;
+      position: absolute;
+      top: -30px;
+      left: -5px;
+      z-index: -1;
+      transform: scale(0.5);
+
+      @include breakpoint(large) {
+        top: -30px;
+        left: -10px;
+        transform: scale(1);
+      }
+    }
+
+    &__text {
+      font-size: 0.8em;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    &__author {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      column-gap: 14px;
+
+      &-image {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+        }
+      }
+
+      &-name {
+        font-size: 0.8em;
+        font-weight: 700;
+      }
+
+      &-title {
+        font-size: 0.7em;
+      }
+    }
+  }
+}
