@@ -7,19 +7,12 @@
     // column-gap: 150px;
     // row-gap: 80px;
     gap: 80px 150px;
-    padding-left: 20px;
-    padding-right: 20px;
     // max-width: 920px;
 
     @include breakpoint(medium) {
       grid-template-columns: repeat(2, 1fr);
       // row-gap: 95px;
       gap: 95px 150px;
-    }
-
-    @include breakpoint(large) {
-      padding-left: 60px;
-      padding-right: 60px;
     }
   }
 
