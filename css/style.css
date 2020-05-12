@@ -52,6 +52,7 @@ section {
 
 input {
   border: none;
+  outline: none;
   font-family: "Raleway", sans-serif;
 }
 
@@ -101,7 +102,6 @@ input {
 
 input[type="text"],
 input[type="email"] {
-  outline: none;
   border-radius: 32px;
   font-size: 0.9rem;
   color: #0b1523;
