@@ -1,0 +1,38 @@
+.btn-cta {
+  padding: 20px 20px;
+  background: linear-gradient(to right, $ctaCyan, $ctaBlue);
+  font-size: 0.875rem;
+  width: 100%;
+  border-radius: $border-radius;
+  font-weight: 700;
+  text-align: center;
+
+  &:hover {
+    background: linear-gradient(to right, $ctaBlue, $ctaBlue);
+  }
+
+  @include breakpoint(medium) {
+    max-width: 200px;
+  }
+
+  &--large {
+    @include breakpoint(medium) {
+      max-width: 280px;
+    }
+  }
+}
+
+input[type="text"],
+input[type="email"] {
+  outline: none;
+  border-radius: $border-radius;
+  font-size: 0.9rem;
+  color: $footerBg;
+  padding: 20px 40px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+}
