@@ -1,10 +1,16 @@
 .signup {
+  margin-top: -300px;
+
+  @include breakpoint(large) {
+    margin-top: -200px;
+  }
   &__block {
     background-color: $introBg;
     padding: 45px 20px;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(290px);
 
     @include breakpoint(medium) {
       padding: 50px 56px 40px;
@@ -12,6 +18,7 @@
 
     @include breakpoint(large) {
       padding: 50px 76px 40px;
+      transform: translateY(230px);
     }
   }
 
