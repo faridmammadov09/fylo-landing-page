@@ -22,9 +22,10 @@ header {
 
   .link {
     font-size: 0.875rem;
+    transition: color 0.2s ease;
 
     &:hover {
-      text-decoration: underline;
+      color: $ctaCyan;
     }
 
     @include breakpoint(large) {

@@ -149,10 +149,12 @@ header .logo {
 
 header .link {
   font-size: 0.875rem;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 header .link:hover {
-  text-decoration: underline;
+  color: #65e2d9;
 }
 
 @media screen and (min-width: 992px) {
